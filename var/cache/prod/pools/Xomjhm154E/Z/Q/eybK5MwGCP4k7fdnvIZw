@@ -1,0 +1,26 @@
+<?php //PrestaShopBundle%255CController%255CAdmin%255CConfigure%255CShowcaseCardController%2523closeShowcaseCardAction
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['PrestaShopBundle\\Security\\Annotation\\AdminSecurity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('PrestaShopBundle\\Security\\Annotation\\AdminSecurity')),
+        clone ($p['PrestaShopBundle\\Security\\Annotation\\DemoRestricted'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('PrestaShopBundle\\Security\\Annotation\\DemoRestricted')),
+    ],
+    null,
+    [
+        'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\Security' => [
+            'expression' => [
+                'is_granted(\'create\', \'CONFIGURE\') && is_granted(\'update\', \'CONFIGURE\')',
+            ],
+        ],
+        'PrestaShopBundle\\Security\\Annotation\\DemoRestricted' => [
+            'redirectRoute' => [
+                1 => 'admin_metas_index',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+); }];
